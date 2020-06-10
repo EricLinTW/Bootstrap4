@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<nav class="navbar navbar-dark navbar-expand-lg bg-primary" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="@Url.Action("Index", "Home")">Eric Practice</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Index", "Home")"> Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    實作頁面展示
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="@Url.Action("SQLData", "Home")"> SQLData <span class="sr-only"></span></a>
+                    <a class="dropdown-item" href="@Url.Action("linqtest", "Home")"> Linqtest <span class="sr-only"></span></a>
+                    <a class="dropdown-item" href="@Url.Action("EntityFramework", "Home")"> EntityFramework OrderMst <span class="sr-only"></span></a>
+                    <a class="dropdown-item" href="@Url.Action("Create", "Home")"> EntityFramework Create <span class="sr-only"></span></a>
+                    <a class="dropdown-item" href="@Url.Action("Html", "Home")"> Html Practice <span class="sr-only"></span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Will do Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action( "About", "Home")"> About <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action( "Contact", "Home")"> Contact <span class="sr-only"></span></a>
+            </li>
+            @*<li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@Html.ActionLink("關於", "About", "Home")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@Html.ActionLink("聯絡我", "Contact", "Home")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@Html.ActionLink("SQL Data", "SQLData", "Home")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@Html.ActionLink("Linq測試頁面", "Linqtest", "Home")</a>
+                </li>*@
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Eric聯強教育訓練展示</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+</nav>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 聯強新人訓練</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Eric的簡易實作</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
